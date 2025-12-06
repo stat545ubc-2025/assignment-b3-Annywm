@@ -1,6 +1,6 @@
 ## BC Farms GHG Emission Dashboard
 
-This Shiny app analyzes Greenhouse Gas (GHG) Emissions from various crop types in BC farms using data from the Litefarm database.
+This Shiny app analyzes Greenhouse Gas (GHG) Emissions from various crop types in BC farms using data from the [Litefarm](https://www.litefarm.org/) database.
 
 ### Features
 
@@ -10,7 +10,7 @@ There are three main features of this app:
 This plot updates based on the **Crop Types** selected by the user in the sidebar "Control Panel".
 
 - **FEATURE 2:** A **Summary Statistics Table** showing the Mean, Median, Minimum, and Maximum GHG emissions for the selected crops. 
-This table updates dynamically with the user's crop selection and includes a sorting function (controlled by a checkbox) to order results by Mean value.
+This table updates dynamically with the user's crop selection and includes a sorting function to order results by Mean value.
 
 - **FEATURE 3:** A **Data Download** feature. Users can export the generated summary statistics table as a `.csv` file by clicking the "Download Summary Table" button in the sidebar.
 
