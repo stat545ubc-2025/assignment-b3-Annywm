@@ -16,4 +16,4 @@ This table updates dynamically with the user's crop selection and includes a sor
 
 ### View the App
 
-You can test out the app for yourself at: [link_to_shinyapp.io][https://annywm.shinyapps.io/ResearchProjects/]
+You can test out the app for yourself at: [link_to_shinyapp.io](https://annywm.shinyapps.io/ResearchProjects/)
