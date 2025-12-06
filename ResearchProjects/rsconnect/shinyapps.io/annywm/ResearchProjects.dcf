@@ -1,0 +1,13 @@
+name: ResearchProjects
+title: ResearchProjects
+username: annywm
+account: annywm
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16252985
+bundleId: 11282370
+url: https://annywm.shinyapps.io/ResearchProjects/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: ai_statement.md|ai_statement.Rmd

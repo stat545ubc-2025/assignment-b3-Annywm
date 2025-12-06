@@ -1,0 +1,74 @@
+AI Statement
+================
+
+## 1. Overview
+
+For this assignment, I consulted the Shiny App examples from the [bslib
+dashboards
+documentation](https://rstudio.github.io/bslib/articles/dashboards/index.html).
+Throughout the development process, I used ChatGPT to assist with
+clarifying Shiny concepts, debugging, and implementing specific UI
+features.
+
+## 2.List of Prompts
+
+Below is the list of prompts I used during the development of the app:
+
+1.**Understanding `reactive()` expressions**
+
+“could you help me understand the below code: what is the function of
+`reactive :server <- function(input, output) { gg_plot <- reactive({ ggplot(penguins) + geom_density(aes(fill = !!input$color_by), alpha = 0.2) + theme_bw(base_size = 16) + theme(axis.title = element_blank()) }) output$bill_length <- renderPlot(gg_plot() + aes(bill_length_mm)) output$bill_depth <- renderPlot(gg_plot() + aes(bill_depth_mm)) output$body_mass <- renderPlot(gg_plot() + aes(body_mass_g)) }"`
+
+2.**Asking about multiple plots**
+
+“what if I want to plot different plots?”
+
+3.**Creating individual subplots**
+
+“Here is my code:
+`output$crop_plot <- renderPlot({ ggplot(data_select(),aes(x = crop, y = Total_GHG , fill = crop )) + geom_boxplot(alpha = 0.6)+ theme_minimal(base_size = 16) + labs(y = "Total GHG emision (CO2e/ha)", x = "") }).`
+How to divide each crop (based on all the crop that user selected) into
+separate plots?”
+
+4.**Understanding `checkboxInput()` expressions**
+
+“how to use `checkboxInput()`”
+
+5.**Asking about “download button” function**
+
+“how to set download function to this summary table:
+`output$summary_table <- renderTable({ data_select() %>% group_by(crop) %>% summarise( Mean = round(mean(Total_GHG, na.rm = TRUE),2), Median = round(median(Total_GHG, na.rm = TRUE),2), Min = round(min(Total_GHG, na.rm = TRUE),2), Max = round(max(Total_GHG, na.rm = TRUE),2), )"`
+
+6.**Adding an introduction to the dashboard**
+
+“how to add the introduction to the shiny dashboard”
+
+7.**Asking about popup functionality**
+
+“I think the descrition occupied to many space, is that possible we add
+the description about the dashbord as a popup window”
+
+8.**Asking about popovers and text formatting**
+
+“Here is my code:
+`sidebar_content <- sidebar(   title = “Control Panel”,   popover(     trigger = actionLink(       inputId = “help_info”,       label = “What is this app?”,       icon = icon(“circle-info”)     ),     title = “App Introduction”,     markdown(“This app analyzes Greenhouse Gas (GHG) Emissions from various crop types in BC farms recorded in the Litefarm database. Use the sidebar to filter crops, view their emission density, and download the summary statistics.”),   ),` 1.
+Can this website be referenced in Litefarm: <https://www.litefarm.org/>
+2. Can text be justified in the popup window?”
+
+## 3.Reflection
+
+It was helpful for me to use Generative AI during the development of
+this Shiny app. I mainly used ChatGPT to clarify specific concepts, such
+as how `reactive()` works, how to structure input components, and how to
+implement UI features like popovers and download buttons. It also
+assisted with debugging and explaining error messages, which made the
+development process more efficient and helped me better understand why
+certain components behaved the way they did.
+
+**Limitations:**
+
+While AI can generate and explain code, it does not always understand
+the user’s full intent. If a prompt is vague, the generated output may
+be irrelevant or too trivial. This required me to refine my questions
+and evaluate the suggestions carefully rather than accepting them
+directly.
